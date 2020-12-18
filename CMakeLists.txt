@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.5)
+project(rimebrew LANGUAGES CXX)
+
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(INSTALL_BIN_DIR ${PROJECT_SOURCE_DIR}/bin)
+
+add_subdirectory(src)

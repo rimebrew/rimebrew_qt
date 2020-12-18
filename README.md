@@ -1,0 +1,1 @@
+Qt client for a package manager.
