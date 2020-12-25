@@ -7,13 +7,13 @@ find_package(KF5Archive REQUIRED)
 find_package(yaml-cpp REQUIRED)
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-add_executable(hellozip ${SOURCE_FILES})
-target_link_libraries(hellozip KF5::Archive)
+add_executable(rimebrew ${SOURCE_FILES})
+target_link_libraries(rimebrew KF5::Archive Qt5::Core Qt5::Widgets)
 
 add_executable(yamlProcessor yaml_processor.cpp)
 target_link_libraries(yamlProcessor yaml-cpp)
 
-install(TARGETS hellozip DESTINATION ${INSTALL_BIN_DIR})
+install(TARGETS rimebrew DESTINATION ${INSTALL_BIN_DIR})
 
 
 #[[

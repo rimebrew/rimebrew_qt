@@ -1,40 +1,37 @@
-#include <QCoreApplication>
-#include <QDir>
+#include <iostream>
+#include <QtCore>
+#include <QtDebug>
+#include <cstdlib>
+#include <filesystem>
 
-#include <kzip.h>
+/* TODO:
+ *  Windows -> Dialog to insert a path
+ *  Fcitx -> A choice dialog for 4 or 5
+*/
+
+std::filesystem::path get_user_data_dir(){
+
+    std::filesystem::path user_data_dir;
+#ifdef __linux__
+
+    std::filesystem::path Home = std::filesystem::path(std::getenv("HOME"));
+    if (strcmp(std::getenv("INPUT_METHOD"),"ibus") == 0){
+        return Home.concat("/.config/ibus/rime/");
+    }
+
+#elif defined(__APPLE__)
+    std::filesystem::path Home = std::filesystem::path(std::getenv("HOME"));
+        return Home.concat("/Library/Rime/");
+    #elif defined(__WIN32__)
+
+    #else
+        #error Cannot detect complier.
+#endif
+    return user_data_dir;
+}
+
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication app(argc, argv);
-
-    QStringList args(app.arguments());
-
-    if (args.size() != 2) {
-        // Too many or too few arguments
-        qWarning("Usage: ./unzipper <archive.zip>");
-        return 1;
-    }
-
-    QString file = args.at(1);
-    KZip archive(file);
-
-    // Open the archive
-    if (!archive.open(QIODevice::ReadOnly)) {
-        qWarning("Cannot open " + file.toLatin1());
-        qWarning("Is it a valid zip file?");
-        return 1;
-    }
-
-    // Take the root folder from the archive and create a KArchiveDirectory object.
-    // KArchiveDirectory represents a directory in a KArchive.
-    const KArchiveDirectory *root = archive.directory();
-
-    // We can extract all contents from a KArchiveDirectory to a destination.
-    // recursive true will also extract subdirectories.
-    QString destination = QDir::currentPath();
-    bool recursive = true;
-    root->copyTo(destination, recursive);
-
-    archive.close();
     return 0;
 }
