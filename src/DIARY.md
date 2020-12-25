@@ -1,3 +1,7 @@
+Just do it.
+
+---
+
 Well, i still got a chunk of techs to learn before actually do it.
 
 ----
