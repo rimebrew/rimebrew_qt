@@ -1,7 +1,3 @@
-Well, i still got a chunk of techs to learn before actually do it.
-
-----
-
 GTK changed their APIs too fast, not gonna to use GTK.
 
 GNOME is really viewing themselves as something big like Windows or macOS. Everything should look GNOME-y if you use GTK, and everything else must adopt the GNOME-y style if targeting GNOME.
