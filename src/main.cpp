@@ -30,8 +30,13 @@ std::filesystem::path get_user_data_dir(){
     return user_data_dir;
 }
 
+bool first_run(){
+    return std::filesystem::exists(get_user_data_dir());
+}
+
 
 int main(int argc, char *argv[])
 {
+
     return 0;
 }

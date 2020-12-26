@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.17)
 project(rimebrew)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp first_run.cpp first_run.h)
 
 find_package(KF5Archive REQUIRED)
 find_package(yaml-cpp REQUIRED)
