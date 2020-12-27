@@ -15,8 +15,13 @@ public:
     explicit mainwindow(QWidget *parent = nullptr);
     ~mainwindow();
 
+public slots:
+    void save_settings();
+
 //signals:
 //    void want_new_schema();
+
+
 
 };
 #endif // MAINWINDOW_H

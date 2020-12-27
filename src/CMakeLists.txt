@@ -20,10 +20,16 @@ set(SOURCE_FILES
         mainwindow.cpp
         mainwindow.h
         rimebrew.ui
+        default_custom.cpp
+        default_custom.h
         )
 
 add_executable(rimebrew ${SOURCE_FILES})
-target_link_libraries(rimebrew PRIVATE KF5::Archive Qt5::Core Qt5::Widgets)
+target_link_libraries(rimebrew PRIVATE
+                            KF5::Archive
+                            Qt5::Core
+                            Qt5::Widgets
+                            yaml-cpp)
 
 add_executable(yamlProcessor yaml_processor.cpp)
 target_link_libraries(yamlProcessor yaml-cpp)

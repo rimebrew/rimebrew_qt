@@ -8,6 +8,9 @@
 #include "first_run.h"
 #include "mainwindow.h"
 
+#include "default_custom.h"
+
+
 /* TODO:
  *  Windows -> Dialog to insert a path
  *  Fcitx -> A choice dialog for 4 or 5
@@ -38,6 +41,7 @@ std::filesystem::path get_user_data_dir(){
 
 int main(int argc, char *argv[])
 {
+    default_custom id = default_custom();
 
     // QSettings info
 
