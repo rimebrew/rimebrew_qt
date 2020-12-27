@@ -5,7 +5,6 @@
 #include <cstdlib>
 #include <filesystem>
 
-
 #include "first_run.h"
 /* TODO:
  *  Windows -> Dialog to insert a path
@@ -37,11 +36,25 @@ std::filesystem::path get_user_data_dir(){
 
 int main(int argc, char *argv[])
 {
+
+    // QSettings info
+
     QApplication app(argc, argv);
+
+    QCoreApplication::setOrganizationName("rimebrew");
+    QCoreApplication::setOrganizationDomain("org.slbtty");
+    QCoreApplication::setApplicationName("rimebrew");
+    QSettings g_settings;
 
     FirstRun firstrun;
 
-    firstrun.show();
+    if(!g_settings.value("global/configured").isValid())
+    {
+        firstrun.show();
+    }else{
+        qDebug()<<"Already set usr_data_dir";
+        qDebug()<<g_settings.value("global/usrdatadir");
+    };
 
 //    if(!std::filesystem::exists(get_user_data_dir())){
 

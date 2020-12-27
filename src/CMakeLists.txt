@@ -2,6 +2,12 @@ cmake_minimum_required(VERSION 3.17)
 project(rimebrew)
 
 
+#let qDebug dont output if on release mode.
+if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+else()
+    add_compile_definitions(QT_NO_DEBUG_OUTPUT)
+endif()
+
 find_package(KF5Archive REQUIRED)
 find_package(yaml-cpp REQUIRED)
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
