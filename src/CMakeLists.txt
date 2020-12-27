@@ -1,14 +1,15 @@
 cmake_minimum_required(VERSION 3.17)
 project(rimebrew)
 
-set(SOURCE_FILES main.cpp first_run.cpp first_run.h)
 
 find_package(KF5Archive REQUIRED)
 find_package(yaml-cpp REQUIRED)
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
+set(SOURCE_FILES main.cpp first_run.cpp first_run.h first_run.ui)
+
 add_executable(rimebrew ${SOURCE_FILES})
-target_link_libraries(rimebrew KF5::Archive Qt5::Core Qt5::Widgets)
+target_link_libraries(rimebrew PRIVATE KF5::Archive Qt5::Core Qt5::Widgets)
 
 add_executable(yamlProcessor yaml_processor.cpp)
 target_link_libraries(yamlProcessor yaml-cpp)

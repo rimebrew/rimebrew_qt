@@ -1,9 +1,11 @@
 #include <iostream>
 #include <QtCore>
 #include <QtDebug>
+#include <QApplication>
 #include <cstdlib>
 #include <filesystem>
 
+#include "first_run.h"
 /* TODO:
  *  Windows -> Dialog to insert a path
  *  Fcitx -> A choice dialog for 4 or 5
@@ -37,6 +39,8 @@ bool first_run(){
 
 int main(int argc, char *argv[])
 {
-
-    return 0;
+    QApplication app(argc, argv);
+    FirstRun firstrun;
+    firstrun.show();
+    return app.exec();
 }
