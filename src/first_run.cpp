@@ -2,7 +2,6 @@
 // Created by slbtty on 12/26/20.
 //
 
-#include "first_run.h"
 #include <iostream>
 #include <QRadioButton>
 #include <QtCore>
@@ -11,6 +10,8 @@
 #include <QDir>
 #include <QPushButton>
 #include <QSettings>
+
+#include "first_run.h"
 
 FirstRun::FirstRun(QWidget *parent)
     :QWidget(parent)

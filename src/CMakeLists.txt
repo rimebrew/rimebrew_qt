@@ -12,7 +12,15 @@ find_package(KF5Archive REQUIRED)
 find_package(yaml-cpp REQUIRED)
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-set(SOURCE_FILES main.cpp first_run.cpp first_run.h first_run.ui)
+set(SOURCE_FILES
+        main.cpp
+        first_run.cpp
+        first_run.h
+        first_run.ui
+        mainwindow.cpp
+        mainwindow.h
+        rimebrew.ui
+        )
 
 add_executable(rimebrew ${SOURCE_FILES})
 target_link_libraries(rimebrew PRIVATE KF5::Archive Qt5::Core Qt5::Widgets)

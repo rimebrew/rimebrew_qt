@@ -2,8 +2,8 @@
 // Created by slbtty on 12/26/20.
 //
 
-#ifndef RIMEBREW_FIRST_RUN_H
-#define RIMEBREW_FIRST_RUN_H
+#ifndef FIRST_RUN_H
+#define FIRST_RUN_H
 
 #include <QWidget>
 

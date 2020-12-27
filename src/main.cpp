@@ -6,6 +6,8 @@
 #include <filesystem>
 
 #include "first_run.h"
+#include "mainwindow.h"
+
 /* TODO:
  *  Windows -> Dialog to insert a path
  *  Fcitx -> A choice dialog for 4 or 5
@@ -47,6 +49,8 @@ int main(int argc, char *argv[])
     QSettings g_settings;
 
     FirstRun firstrun;
+    mainwindow Mainwindow;
+    Mainwindow.show();
 
     if(!g_settings.value("global/configured").isValid())
     {
