@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <filesystem>
 
+
 #include "first_run.h"
 /* TODO:
  *  Windows -> Dialog to insert a path
@@ -32,15 +33,19 @@ std::filesystem::path get_user_data_dir(){
     return user_data_dir;
 }
 
-bool first_run(){
-    return std::filesystem::exists(get_user_data_dir());
-}
 
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+
     FirstRun firstrun;
+
     firstrun.show();
+
+//    if(!std::filesystem::exists(get_user_data_dir())){
+
+//    }
+
     return app.exec();
 }

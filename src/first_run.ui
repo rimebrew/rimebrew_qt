@@ -22,19 +22,6 @@
   <property name="windowTitle">
    <string>首次运行</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>240</y>
-     <width>174</width>
-     <height>34</height>
-    </rect>
-   </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-   </property>
-  </widget>
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
@@ -51,21 +38,21 @@
     <item row="0" column="0">
      <widget class="QRadioButton" name="radio_fcitx4">
       <property name="text">
-       <string>中州韻(fcitx4)</string>
+       <string>中州韻 (fcitx4)</string>
       </property>
      </widget>
     </item>
     <item row="0" column="1">
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>~/.local/share/fcitx5/rime/</string>
+       <string>~/.config/fcitx/rime/</string>
       </property>
      </widget>
     </item>
     <item row="1" column="0">
      <widget class="QRadioButton" name="radio_fcitx5">
       <property name="text">
-       <string>中州韻(fcitx5)</string>
+       <string>中州韻 (fcitx5)</string>
       </property>
      </widget>
     </item>
@@ -79,7 +66,7 @@
     <item row="2" column="0">
      <widget class="QRadioButton" name="radio_ibus">
       <property name="text">
-       <string>中州韻(ibus)</string>
+       <string>中州韻 (ibus)</string>
       </property>
      </widget>
     </item>
@@ -134,7 +121,7 @@
      <widget class="QLineEdit" name="path_edit"/>
     </item>
     <item>
-     <widget class="QPushButton" name="custom_path">
+     <widget class="QPushButton" name="custom_path_btn">
       <property name="text">
        <string>自定义</string>
       </property>
@@ -153,6 +140,19 @@
    </property>
    <property name="text">
     <string>请选择 RIME 的变种和配置文件夹 :)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ok_btn">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>240</y>
+     <width>411</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确认</string>
    </property>
   </widget>
  </widget>

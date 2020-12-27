@@ -1,3 +1,6 @@
+Qt's notes on how to deal "config path"
+https://doc.qt.io/qt-5/qsettings.html#platform-specific-notes
+
 GTK changed their APIs too fast, not gonna to use GTK.
 
 GNOME is really viewing themselves as something big like Windows or macOS. Everything should look GNOME-y if you use GTK, and everything else must adopt the GNOME-y style if targeting GNOME.

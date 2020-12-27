@@ -24,6 +24,15 @@ public:
 
 public slots:
     static void printhello();
+
+private:
+private slots:
+    void fcitx4_selected();
+    void fcitx5_selected();
+    void ibus_selected();
+//    void win_selected();
+    void mac_selected();
+    void custom_rime_dir();
 };
 
 
