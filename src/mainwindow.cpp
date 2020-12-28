@@ -17,6 +17,5 @@ mainwindow::~mainwindow()
 
 
 void mainwindow::save_settings(){
-    qDebug()<<this->radio_horizontal->isChecked();
 
 }

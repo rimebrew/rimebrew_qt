@@ -41,8 +41,6 @@ std::filesystem::path get_user_data_dir(){
 
 int main(int argc, char *argv[])
 {
-    default_custom id = default_custom();
-
     // QSettings info
 
     QApplication app(argc, argv);
