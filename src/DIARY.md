@@ -1,5 +1,14 @@
+>>> 
+
+QFile & QString are deprecated at Qt6. You should use standard cpp class.
+https://doc.qt.io/qt-5/obsoleteclasses.html
+
+>>>
+
 Qt's notes on how to deal "config path"
 https://doc.qt.io/qt-5/qsettings.html#platform-specific-notes
+
+>>>
 
 GTK changed their APIs too fast, not gonna to use GTK.
 
