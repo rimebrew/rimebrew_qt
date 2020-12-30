@@ -1,7 +1,7 @@
 >>> 
 
-QFile & QString are deprecated at Qt6. You should use standard cpp class.
-https://doc.qt.io/qt-5/obsoleteclasses.html
+Qt6
+https://doc.qt.io/qt-6/portingguide.html
 
 >>>
 
